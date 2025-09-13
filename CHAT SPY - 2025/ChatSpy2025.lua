@@ -1,1 +1,1 @@
-game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage('<font color="#FFD700" face="SourceSansBold">THIS SHIT WAS PATCHED BY ROBLOX, I WILL DO MY BEST TO FIX IT(but I don't know if there will be a solution this time)</font>')
+game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#FFD700' face='SourceSansBold'>THIS SHIT WAS PATCHED BY ROBLOX, I WILL DO MY BEST TO FIX IT (but I don't know if there will be a solution this time)</font>")
