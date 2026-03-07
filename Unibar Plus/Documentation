@@ -1,0 +1,184 @@
+📘 Unibar Plus – Complete Usage Documentation
+
+Unibar Plus is a simple script that allows you to create buttons with custom functions in Roblox Unibar.
+Below you will see in detail how to use it.
+
+==[=====================÷÷÷====================]==
+
+🔘 Creating Buttons
+
+Buttons are created using the MakeButton event.
+
+⚙️ Syntax (oneclick)
+
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("oneclick", Name, SelectedImageId, SelectedFunction)
+
+⚙️ Syntax (twoclick)
+
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick", Name, SelectedImageId, UnSelectedImageId, SelectedFunction, UnSelectedFunction)
+
+📃 Parameters
+
+Parameter	Description 👇
+
+• Type:	Can be "oneclick" or "twoclick"
+• Name:	Unique name of the button
+• SelectedImageId:	Image ID used when the button is selected
+• UnSelectedImageId:	Image ID used when the button is not selected (only for twoclick)
+• SelectedFunction:	Function executed when selected
+• UnSelectedFunction:	Function executed when deselected (only for twoclick)
+
+
+🖼️ Obtaining an image ID
+There are two ways to get an image for your button:
+
+• 🛒 Get it from the store
+> https://create.roblox.com/store/category/2d <
+
+• 📤 Using your own images
+> https://create.roblox.com/dashboard/creations?activeTab=Decal <
+
+-- You can obtain the ID by clicking “...” on the image and selecting Copy ID, or from the browser URL.
+-- To upload, use the Decals tab in the creations panel and get the ID from the Images tab.
+
+==[=====================÷÷÷====================]==
+
+Unibar Plus has two main button types (defined by the 'Type' parameter):
+• "oneclick" – Single-action button
+• "twoclick" – Toggle button: Selected / Deselected
+
+⬇️ Below is how to create and use them correctly ⬇️
+
+⚡ OneClick Button ⚡
+• A oneclick button executes a function every time it is pressed.
+
+
+💡 Examples of functions(With and without parameters) 💡  
+  
+function Kill()  
+  print("Haha Killed!")  
+end  
+  
+function Kill(player)  
+  print(player .. " Killed!!")  
+end  
+  
+(Without parameters)  
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("oneclick", "KillButton", "12345", Kill)  
+  
+(With parameters)  
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("oneclick","KillButton","12345",function() Kill("Jhon") end)  
+  
+This will create the button in the Unibar, and whenever it is clicked, it will execute the defined function.  
+
+==[=====================÷÷÷====================]==
+
+🔁 TwoClick Button (Toggle)
+
+A twoclick button works like a toggle switch with two states:
+
+• Selected – runs SelectedFunction
+• Unselected – runs UnSelectedFunction
+
+
+💡 Examples of functions(With and without parameters) 💡  
+  
+function TpVoid()  
+  print("Bruh")  
+end  
+  
+function TpLobby()  
+  print("Lobby, wow")  
+end  
+  
+function kick(player)  
+  print(player .. " kicked!!")  
+end  
+  
+(Without parameters)  
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick","TpButton", "12345", "678910", TpLobby, TpVoid)  
+  
+(With parameters)  
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick","KillButton","12345",function() Kick("Jhon"), function() Kick("Alex") end)  
+  
+
+❓ How it works:
+
+• First click: Button becomes selected, runs SelectedFunction.
+• Second click: Button becomes unselected, runs UnSelectedFunction.
+
+
+==[=====================÷÷÷====================]==
+
+🔔 Notifications
+
+Displayed using the Notify event.
+
+⚙️ Syntax:
+game:GetService("ReplicatedStorage")["Unibar Plus API"].Notify:Fire(title, text, duration)
+
+Parameters:
+title – Notification title
+text – Notification message
+duration – How long the notification stays visible
+
+
+Example:
+game:GetService("ReplicatedStorage")["Unibar Plus API"].Notify:Fire("Wow", "Hey guys", 20)
+
+==[=====================÷÷÷====================]==
+
+🗑️ Remove Buttons
+
+Removes a button created in Unibar:
+
+game:GetService("ReplicatedStorage")["Unibar Plus API"].RemoveButton:Fire("KillButton")
+
+This will remove the button if it exists.
+
+==[=====================÷÷÷====================]==
+
+⚠️ Code Security
+
+Unibar Plus automatically handles:
+
+❌ Invalid functions
+❌ Errors inside functions
+❌ Incorrect use of the button creation function
+
+If a function does not exist or produces an error, a Notify alert will appear when the button is clicked, keeping your UI stable.
+
+==[=====================÷÷÷====================]==
+
+🧠 Examples Combining Everything
+
+-- OneClick without parameters
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("oneclick", "LightButton", "101744283149050", TurnOnLight)
+
+-- OneClick with parameters
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("oneclick", "MusicButton", "101744283149050", function() PlaySong("MySong") end)
+
+-- TwoClick without parameters
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick", "TpButton", "12345", "678910", TpLobby, TpVoid)
+
+-- TwoClick with parameters
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick", "KickButton", "12345", "678910", function() Kick("Jhon") end, function() Kick("Alex") end)
+
+-- Notification
+game:GetService("ReplicatedStorage")["Unibar Plus API"].Notify:Fire("Wow", "Hey guys", 20)
+
+-- Remove a button
+game:GetService("ReplicatedStorage")["Unibar Plus API"].RemoveButton:Fire("KickButton")
+
+==[=====================÷÷÷====================]==
+
+🚀 Summary
+
+Unibar Plus provides three main features:
+
+🔘 MakeButton (oneclick) – Executes a function when clicked
+🔁 MakeButton (twoclick) – Creates toggle buttons with two states
+🗑️ RemoveButton - Deleted an existing button.
+🔔 Notify – Displays notifications
+
+All features are designed to be simple, safe, and easy to integrate into any Roblox UI system.
