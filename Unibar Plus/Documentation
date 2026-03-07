@@ -99,7 +99,7 @@ end
 game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick","TpButton", "12345", "678910", TpLobby, TpVoid)  
   
 (With parameters)  
-game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick","KillButton","12345",function() Kick("Jhon"), function() Kick("Alex") end)  
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick","KillButton","12345","678910", function() Kick("Jhon") end, function() Kick("Alex") end)
   
 
 ❓ How it works:
@@ -178,7 +178,7 @@ Unibar Plus provides three main features:
 
 🔘 MakeButton (oneclick) – Executes a function when clicked
 🔁 MakeButton (twoclick) – Creates toggle buttons with two states
-🗑️ RemoveButton - Deleted an existing button.
+🗑️ RemoveButton – Removes an existing button
 🔔 Notify – Displays notifications
 
 All features are designed to be simple, safe, and easy to integrate into any Roblox UI system.
