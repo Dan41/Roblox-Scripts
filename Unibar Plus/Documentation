@@ -1,7 +1,7 @@
 📘 Unibar Plus – Complete Usage Documentation
 
 Unibar Plus is a simple script that allows you to create buttons with custom functions in Roblox Unibar.
-Below you will see in detail how to use it.
+Below, you will see a detailed guide on how to use it
 
 ==[=====================÷÷÷====================]==
 
@@ -38,8 +38,7 @@ There are two ways to get an image for your button:
 • 📤 Using your own images
 > https://create.roblox.com/dashboard/creations?activeTab=Decal <
 
--- You can obtain the ID by clicking “...” on the image and selecting Copy ID, or from the browser URL.
--- To upload, use the Decals tab in the creations panel and get the ID from the Images tab.
+To get the image ID, click “...” on the decal and select “Copy ID”, or copy it from the URL. To upload, use the Decals tab in the creations panel and get the ID from the Images tab.
 
 ==[=====================÷÷÷====================]==
 
@@ -99,7 +98,7 @@ end
 game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick","TpButton", "12345", "678910", TpLobby, TpVoid)  
   
 (With parameters)  
-game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick","KillButton","12345","678910", function() Kick("Jhon") end, function() Kick("Alex") end)
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick","KillButton","12345","678910", function() kick("Jhon") end, function() kick("Alex") end)
   
 
 ❓ How it works:
@@ -130,7 +129,7 @@ game:GetService("ReplicatedStorage")["Unibar Plus API"].Notify:Fire("Wow", "Hey 
 
 🗑️ Remove Buttons
 
-Removes a button created in Unibar:
+Removes a button previously created in Unibar:
 
 game:GetService("ReplicatedStorage")["Unibar Plus API"].RemoveButton:Fire("KillButton")
 
