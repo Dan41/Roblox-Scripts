@@ -39,7 +39,9 @@ There are two ways to get an image for your button:
 
 To get the image ID, click “...” on the decal and select “Copy ID”, or copy it from the URL. To upload, use the Decals tab in the creations panel and get the ID from the Images tab.
 
+
 ==[=====================÷÷÷====================]==
+
 
 Unibar Plus has two main button types (defined by the 'Type' parameter):
 • "oneclick" – Single-action button
@@ -69,7 +71,9 @@ game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("oneclic
   
 This will create the button in the Unibar, and whenever it is clicked, it will execute the defined function.  
 
+
 ==[=====================÷÷÷====================]==
+
 
 🔁 TwoClick Button (Toggle)
 
@@ -108,6 +112,19 @@ game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclic
 
 ==[=====================÷÷÷====================]==
 
+
+🗑️ Remove Buttons
+
+Removes a button previously created in Unibar:
+
+game:GetService("ReplicatedStorage")["Unibar Plus API"].RemoveButton:Fire("KillButton")
+
+This will remove the button if it exists.
+
+
+==[=====================÷÷÷====================]==
+
+
 🔔 Notifications
 
 Displayed using the Notify event.
@@ -126,13 +143,15 @@ game:GetService("ReplicatedStorage")["Unibar Plus API"].Notify:Fire("Wow", "Hey 
 
 ==[=====================÷÷÷====================]==
 
-🗑️ Remove Buttons
 
-Removes a button previously created in Unibar:
+🖼️ Change icon 🖼️
 
-game:GetService("ReplicatedStorage")["Unibar Plus API"].RemoveButton:Fire("KillButton")
+• Allows you to change the default UniBar Plus icon/logo
 
-This will remove the button if it exists.
+game:GetService("ReplicatedStorage")["Unibar Plus API"].Seticon:Fire("101744283149050")
+
+Use the image ID
+
 
 ==[=====================÷÷÷====================]==
 
@@ -150,33 +169,37 @@ If a function does not exist or produces an error, a Notify alert will appear wh
 
 🧠 Examples Combining Everything
 
--- OneClick without parameters
+-- oneclick without parameters
 game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("oneclick", "LightButton", "101744283149050", TurnOnLight)
 
--- OneClick with parameters
+-- oneclick with parameters
 game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("oneclick", "MusicButton", "101744283149050", function() PlaySong("MySong") end)
 
--- TwoClick without parameters
+-- twoclick without parameters
 game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick", "TpButton", "12345", "678910", TpLobby, TpVoid)
 
--- TwoClick with parameters
+-- twoclick with parameters
 game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick", "KickButton", "12345", "678910", function() Kick("Jhon") end, function() Kick("Alex") end)
 
--- Notification
+-- Notify
 game:GetService("ReplicatedStorage")["Unibar Plus API"].Notify:Fire("Wow", "Hey guys", 20)
 
--- Remove a button
+-- RemoveButton
 game:GetService("ReplicatedStorage")["Unibar Plus API"].RemoveButton:Fire("KickButton")
+
+-- Seticon
+game:GetService("ReplicatedStorage")["Unibar Plus API"].Seticon:Fire("101744283149050")
 
 ==[=====================÷÷÷====================]==
 
 🚀 Summary
 
-Unibar Plus provides 4 main features:
+Unibar Plus provides 5 main features:
 
 🔘 MakeButton (oneclick) – Executes a function when clicked
 🔁 MakeButton (twoclick) – Creates toggle buttons with two states
 🗑️ RemoveButton – Removes an existing button
+🖼️ Seticon - Changes the default Unibar Plus icon/logo image
 🔔 Notify – Displays notifications
 
-All features are designed to be simple, safe, and easy to integrate.
+All features are designed to be simple, safe, and easy to integrate! :D
