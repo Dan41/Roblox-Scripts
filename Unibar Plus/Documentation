@@ -28,7 +28,6 @@ Parameter	Description 👇
 • SelectedFunction:	Function executed when selected
 • UnSelectedFunction:	Function executed when deselected (only for twoclick)
 
-
 🖼️ Obtaining an image ID
 There are two ways to get an image for your button:
 
@@ -90,7 +89,7 @@ function TpLobby()
   print("Lobby, wow")  
 end  
   
-function kick(player)  
+function Kick(player)  
   print(player .. " kicked!!")  
 end  
   
@@ -98,7 +97,7 @@ end
 game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick","TpButton", "12345", "678910", TpLobby, TpVoid)  
   
 (With parameters)  
-game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick","KillButton","12345","678910", function() kick("Jhon") end, function() kick("Alex") end)
+game:GetService("ReplicatedStorage")["Unibar Plus API"].MakeButton:Fire("twoclick","KillButton","12345","678910", function() Kick("Jhon") end, function() Kick("Alex") end)
   
 
 ❓ How it works:
@@ -180,4 +179,4 @@ Unibar Plus provides three main features:
 🗑️ RemoveButton – Removes an existing button
 🔔 Notify – Displays notifications
 
-All features are designed to be simple, safe, and easy to integrate into any Roblox UI system.
+All features are designed to be simple, safe, and easy to integrate.
