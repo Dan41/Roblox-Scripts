@@ -144,7 +144,7 @@ Unibar Plus automatically handles:
 ❌ Errors inside functions
 ❌ Incorrect use of the button creation function
 
-If a function does not exist or produces an error, a Notify alert will appear when the button is clicked, keeping your UI stable.
+If a function does not exist or produces an error, a Notify alert will appear when the button is clicked.
 
 ==[=====================÷÷÷====================]==
 
@@ -172,7 +172,7 @@ game:GetService("ReplicatedStorage")["Unibar Plus API"].RemoveButton:Fire("KickB
 
 🚀 Summary
 
-Unibar Plus provides three main features:
+Unibar Plus provides 4 main features:
 
 🔘 MakeButton (oneclick) – Executes a function when clicked
 🔁 MakeButton (twoclick) – Creates toggle buttons with two states
