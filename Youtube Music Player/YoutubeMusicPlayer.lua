@@ -1,5 +1,6 @@
 -- YouTube Music Player V5.0 ~ Developed by Termux_404
 
+local cloneref = cloneref or function(o) return o end
 StarterGui = cloneref(game:GetService("StarterGui"))
 
 StarterGui:SetCore("SendNotification", {
