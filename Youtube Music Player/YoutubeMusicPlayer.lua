@@ -1,10 +1,11 @@
 -- YouTube Music Player V5.0 ~ Developed by Termux_404
 
 local cloneref = cloneref or function(o) return o end
+
 StarterGui = cloneref(game:GetService("StarterGui"))
 
 StarterGui:SetCore("SendNotification", {
-    Title = "Update Coming!",
+    Title = "50% complete!",
     Text = "Version 6.0 is currently in development.",
     Icon = "rbxassetid://83758613781843",
     Duration = 10
