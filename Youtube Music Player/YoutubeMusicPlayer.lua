@@ -3,7 +3,7 @@
 local cloneref = cloneref or function(o) return o end
 
 cloneref(game:GetService("StarterGui")):SetCore("SendNotification", {
-	Title = "⚠️ Attention",
+	Title = "🎥 Reminder",
 	Text = "Roblox made changes that broke video playback, it's not working at the moment.",
 	Duration = 15
 })
