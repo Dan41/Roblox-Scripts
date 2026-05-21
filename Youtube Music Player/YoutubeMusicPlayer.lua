@@ -5,8 +5,8 @@ local cloneref = cloneref or function(o) return o end
 local SG = cloneref(game:GetService("StarterGui"))
 
 SG:SetCore("SendNotification", {
-    Title = "Help me",
-    Text = "Get a Premium key through ads so I can keep the script online and working",
+    Title = "🎥 Video bug fixed!",
+    Text = "The latest version of Delta has fixed the video error",
     Icon = "rbxassetid://83758613781843",
     Duration = 10
 })
