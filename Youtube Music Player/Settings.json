@@ -1,6 +1,6 @@
 {
   "Version": 8.5,
   "Announcements": "Welcome to the YouTube Music Player!",
-  "FloatingButton": "rbxassetid://83758613781843",
-  "Dev": "rbxassetid://133870670841057"
+  "FloatingButton": 83758613781843,
+  "Dev": 133870670841057
 }
